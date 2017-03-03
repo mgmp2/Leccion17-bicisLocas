@@ -13,7 +13,7 @@ function validateForm(){
     var cont = 0;
 
     //Name
-    if(!expRegName.test(nom.value)){
+    if(!expRegName.test(nom.value)|| nom.value ==""){
       alert("Escribir correctamente \nCampo nombre: empezando por Mayúscula");
       nom.focus();
       cont++;
@@ -35,7 +35,7 @@ function validateForm(){
 
     //Password
     else if(!expRegPass.test(pas.value)){
-      if(pas.value == "123456" || pas.value == "98754"){
+      if(pas.value == "123456" || pas.value == "98754" || pas.value == ""){
         alert("Escribir correctamente \nCampos de contraseña diferente de: 123456 o 98754");
         pas.focus();
         cont++;
